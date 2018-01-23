@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5991EB56200D1F40002D629A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5991EB55200D1F40002D629A /* Profile.swift */; };
+		5991EB59200D7C63002D629A /* AllProfilesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5991EB58200D7C63002D629A /* AllProfilesTableViewController.swift */; };
 		5997361D200AC3C3007D0F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997361C200AC3C3007D0F50 /* AppDelegate.swift */; };
-		5997361F200AC3C3007D0F50 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997361E200AC3C3007D0F50 /* FirstViewController.swift */; };
-		59973621200AC3C3007D0F50 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59973620200AC3C3007D0F50 /* SecondViewController.swift */; };
+		5997361F200AC3C3007D0F50 /* ProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997361E200AC3C3007D0F50 /* ProfilesViewController.swift */; };
+		59973621200AC3C3007D0F50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59973620200AC3C3007D0F50 /* LoginViewController.swift */; };
 		59973624200AC3C3007D0F50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59973622200AC3C3007D0F50 /* Main.storyboard */; };
 		59973626200AC3C3007D0F50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59973625200AC3C3007D0F50 /* Assets.xcassets */; };
 		59973629200AC3C3007D0F50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59973627200AC3C3007D0F50 /* LaunchScreen.storyboard */; };
+		59A4B2E02013FE1E00F6CF13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59A4B2DF2013FE1E00F6CF13 /* GoogleService-Info.plist */; };
+		59B45C6C201593F3005A5B79 /* LoginViewController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B45C6B201593F3005A5B79 /* LoginViewController+handlers.swift */; };
+		E8D198425DD2B63567F2678B /* Pods_fitchike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFD91FD4B92250092CFC60C /* Pods_fitchike.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52B174514E86DCD7D794145A /* Pods-fitchike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitchike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fitchike/Pods-fitchike.debug.xcconfig"; sourceTree = "<group>"; };
+		5991EB55200D1F40002D629A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		5991EB58200D7C63002D629A /* AllProfilesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProfilesTableViewController.swift; sourceTree = "<group>"; };
 		59973619200AC3C3007D0F50 /* fitchike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitchike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5997361C200AC3C3007D0F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5997361E200AC3C3007D0F50 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		59973620200AC3C3007D0F50 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5997361E200AC3C3007D0F50 /* ProfilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesViewController.swift; sourceTree = "<group>"; };
+		59973620200AC3C3007D0F50 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		59973623200AC3C3007D0F50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59973625200AC3C3007D0F50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59973628200AC3C3007D0F50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5997362A200AC3C3007D0F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59A4B2DF2013FE1E00F6CF13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		59B45C6B201593F3005A5B79 /* LoginViewController+handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LoginViewController+handlers.swift"; path = "fitchike/controllers/LoginViewController+handlers.swift"; sourceTree = SOURCE_ROOT; };
+		79BA9112B8E9E474B8826C00 /* Pods-fitchike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitchike.release.xcconfig"; path = "Pods/Target Support Files/Pods-fitchike/Pods-fitchike.release.xcconfig"; sourceTree = "<group>"; };
+		CEFD91FD4B92250092CFC60C /* Pods_fitchike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitchike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D198425DD2B63567F2678B /* Pods_fitchike.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5991EB57200D1F4B002D629A /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				5991EB55200D1F40002D629A /* Profile.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		59973610200AC3C2007D0F50 = {
 			isa = PBXGroup;
 			children = (
 				5997361B200AC3C3007D0F50 /* fitchike */,
 				5997361A200AC3C3007D0F50 /* Products */,
+				81CAE90DEC21F41C777CF0A9 /* Pods */,
+				66C8F6B0F188B1FC0692707E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +79,44 @@
 		5997361B200AC3C3007D0F50 /* fitchike */ = {
 			isa = PBXGroup;
 			children = (
+				59973630200AC95D007D0F50 /* Controllers */,
+				5991EB57200D1F4B002D629A /* DataModel */,
 				5997361C200AC3C3007D0F50 /* AppDelegate.swift */,
-				5997361E200AC3C3007D0F50 /* FirstViewController.swift */,
-				59973620200AC3C3007D0F50 /* SecondViewController.swift */,
 				59973622200AC3C3007D0F50 /* Main.storyboard */,
 				59973625200AC3C3007D0F50 /* Assets.xcassets */,
 				59973627200AC3C3007D0F50 /* LaunchScreen.storyboard */,
 				5997362A200AC3C3007D0F50 /* Info.plist */,
+				59A4B2DF2013FE1E00F6CF13 /* GoogleService-Info.plist */,
 			);
 			path = fitchike;
+			sourceTree = "<group>";
+		};
+		59973630200AC95D007D0F50 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				59973620200AC3C3007D0F50 /* LoginViewController.swift */,
+				59B45C6B201593F3005A5B79 /* LoginViewController+handlers.swift */,
+				5997361E200AC3C3007D0F50 /* ProfilesViewController.swift */,
+				5991EB58200D7C63002D629A /* AllProfilesTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		66C8F6B0F188B1FC0692707E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEFD91FD4B92250092CFC60C /* Pods_fitchike.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81CAE90DEC21F41C777CF0A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52B174514E86DCD7D794145A /* Pods-fitchike.debug.xcconfig */,
+				79BA9112B8E9E474B8826C00 /* Pods-fitchike.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +126,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5997362D200AC3C3007D0F50 /* Build configuration list for PBXNativeTarget "fitchike" */;
 			buildPhases = (
+				B12FB24B053E5F9681965108 /* [CP] Check Pods Manifest.lock */,
 				59973615200AC3C3007D0F50 /* Sources */,
 				59973616200AC3C3007D0F50 /* Frameworks */,
 				59973617200AC3C3007D0F50 /* Resources */,
+				41C653EC44F336BF61F012C2 /* [CP] Embed Pods Frameworks */,
+				D5554ECC48ECFA4D6479E1DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59973629200AC3C3007D0F50 /* LaunchScreen.storyboard in Resources */,
+				59A4B2E02013FE1E00F6CF13 /* GoogleService-Info.plist in Resources */,
 				59973626200AC3C3007D0F50 /* Assets.xcassets in Resources */,
 				59973624200AC3C3007D0F50 /* Main.storyboard in Resources */,
 			);
@@ -134,14 +190,89 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		41C653EC44F336BF61F012C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-fitchike/Pods-fitchike-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fitchike/Pods-fitchike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B12FB24B053E5F9681965108 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fitchike-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5554ECC48ECFA4D6479E1DE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fitchike/Pods-fitchike-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		59973615200AC3C3007D0F50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59973621200AC3C3007D0F50 /* SecondViewController.swift in Sources */,
+				5991EB59200D7C63002D629A /* AllProfilesTableViewController.swift in Sources */,
+				59B45C6C201593F3005A5B79 /* LoginViewController+handlers.swift in Sources */,
+				5991EB56200D1F40002D629A /* Profile.swift in Sources */,
+				59973621200AC3C3007D0F50 /* LoginViewController.swift in Sources */,
 				5997361D200AC3C3007D0F50 /* AppDelegate.swift in Sources */,
-				5997361F200AC3C3007D0F50 /* FirstViewController.swift in Sources */,
+				5997361F200AC3C3007D0F50 /* ProfilesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +407,7 @@
 		};
 		5997362E200AC3C3007D0F50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52B174514E86DCD7D794145A /* Pods-fitchike.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +423,7 @@
 		};
 		5997362F200AC3C3007D0F50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79BA9112B8E9E474B8826C00 /* Pods-fitchike.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
