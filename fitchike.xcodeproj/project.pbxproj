@@ -17,6 +17,8 @@
 		59973629200AC3C3007D0F50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59973627200AC3C3007D0F50 /* LaunchScreen.storyboard */; };
 		59A4B2E02013FE1E00F6CF13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59A4B2DF2013FE1E00F6CF13 /* GoogleService-Info.plist */; };
 		59B45C6C201593F3005A5B79 /* LoginViewController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B45C6B201593F3005A5B79 /* LoginViewController+handlers.swift */; };
+		59FA722C201785D9005985E7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FA722B201785D8005985E7 /* HomeViewController.swift */; };
+		59FA722F2018176E005985E7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FA722E2018176E005985E7 /* Extensions.swift */; };
 		E8D198425DD2B63567F2678B /* Pods_fitchike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFD91FD4B92250092CFC60C /* Pods_fitchike.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		5997362A200AC3C3007D0F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59A4B2DF2013FE1E00F6CF13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		59B45C6B201593F3005A5B79 /* LoginViewController+handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LoginViewController+handlers.swift"; path = "fitchike/controllers/LoginViewController+handlers.swift"; sourceTree = SOURCE_ROOT; };
+		59FA722B201785D8005985E7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		59FA722E2018176E005985E7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		79BA9112B8E9E474B8826C00 /* Pods-fitchike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitchike.release.xcconfig"; path = "Pods/Target Support Files/Pods-fitchike/Pods-fitchike.release.xcconfig"; sourceTree = "<group>"; };
 		CEFD91FD4B92250092CFC60C /* Pods_fitchike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitchike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +83,7 @@
 		5997361B200AC3C3007D0F50 /* fitchike */ = {
 			isa = PBXGroup;
 			children = (
+				59FA722D2018173D005985E7 /* Helpers */,
 				59973630200AC95D007D0F50 /* Controllers */,
 				5991EB57200D1F4B002D629A /* DataModel */,
 				5997361C200AC3C3007D0F50 /* AppDelegate.swift */,
@@ -94,12 +99,21 @@
 		59973630200AC95D007D0F50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				59FA722B201785D8005985E7 /* HomeViewController.swift */,
 				59973620200AC3C3007D0F50 /* LoginViewController.swift */,
 				59B45C6B201593F3005A5B79 /* LoginViewController+handlers.swift */,
 				5997361E200AC3C3007D0F50 /* ProfilesViewController.swift */,
 				5991EB58200D7C63002D629A /* AllProfilesTableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		59FA722D2018173D005985E7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				59FA722E2018176E005985E7 /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		66C8F6B0F188B1FC0692707E /* Frameworks */ = {
@@ -270,8 +284,10 @@
 				5991EB59200D7C63002D629A /* AllProfilesTableViewController.swift in Sources */,
 				59B45C6C201593F3005A5B79 /* LoginViewController+handlers.swift in Sources */,
 				5991EB56200D1F40002D629A /* Profile.swift in Sources */,
+				59FA722F2018176E005985E7 /* Extensions.swift in Sources */,
 				59973621200AC3C3007D0F50 /* LoginViewController.swift in Sources */,
 				5997361D200AC3C3007D0F50 /* AppDelegate.swift in Sources */,
+				59FA722C201785D9005985E7 /* HomeViewController.swift in Sources */,
 				5997361F200AC3C3007D0F50 /* ProfilesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,14 +19,14 @@ struct Profile {
 	var email:String
 	var name:String
 	var timeStamp:Date
-	var profileImageURL:String
+	var profileImageURL:String?
 	
 	var dictionary:[String:Any] {
 		return [
 			"email":email,
 			"name":name,
 			"timeStamp":timeStamp,
-			"profileImageURL":profileImageURL
+			"profileImageURL":profileImageURL as Any
 			
 		]
 	}
