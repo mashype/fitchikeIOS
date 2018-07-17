@@ -7,5 +7,8 @@ target 'fitchike' do
 	pod 'Firebase/Firestore'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Storage'
-
+    
+    pod 'FBSDKLoginKit'
+    pod 'LBTAComponents'
+    
 end

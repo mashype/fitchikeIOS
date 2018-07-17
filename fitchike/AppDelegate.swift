@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 import Firebase
 
 
@@ -14,15 +15,21 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
+    let doxDarkPurple = UIColor(r: 133, g: 43, b: 97)
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
-		FirebaseApp.configure()
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        FirebaseApp.configure()
 		
 		window = UIWindow(frame: UIScreen.main.bounds)
 		window?.makeKeyAndVisible()
-		window?.rootViewController = UINavigationController(rootViewController: HomeViewController())
+        
+        //        required to define the layout with collection view.
+        //        LBTA Components provides the layout in this function
+        window?.rootViewController = CustomTabBarController()
+        self.window?.tintColor = fitchBlue
 		
 		return true
 	}

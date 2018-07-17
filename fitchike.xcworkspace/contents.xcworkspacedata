@@ -4,6 +4,69 @@
    <FileRef
       location = "group:fitchike.xcodeproj">
    </FileRef>
+   <Group
+      location = "group:fitchike"
+      name = "fitchike">
+      <Group
+         location = "group:fitchike/Helpers"
+         name = "Helpers">
+         <FileRef
+            location = "group:fitchike/Helpers/Extensions.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:fitchike/Controllers"
+         name = "Controllers">
+         <FileRef
+            location = "group:fitchike/Controllers/HomeViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:fitchike/Controllers/LoginViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:fitchike/controllers/LoginViewController+handlers.swift">
+         </FileRef>
+         <FileRef
+            location = "group:fitchike/Controllers/ProfilesViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:fitchike/Controllers/AllProfilesTableViewController.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:fitchike/DataModel"
+         name = "DataModel">
+         <FileRef
+            location = "group:fitchike/DataModel/Profile.swift">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:fitchike/AppDelegate.swift">
+      </FileRef>
+      <Group
+         location = "group:fitchike"
+         name = "Main.storyboard">
+         <FileRef
+            location = "group:fitchike/Base.lproj/Main.storyboard">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:fitchike/Assets.xcassets">
+      </FileRef>
+      <Group
+         location = "group:fitchike"
+         name = "LaunchScreen.storyboard">
+         <FileRef
+            location = "group:fitchike/Base.lproj/LaunchScreen.storyboard">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:fitchike/Info.plist">
+      </FileRef>
+      <FileRef
+         location = "group:fitchike/GoogleService-Info.plist">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>

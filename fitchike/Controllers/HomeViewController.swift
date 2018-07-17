@@ -8,79 +8,94 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
-		
-		view.backgroundColor = UIColor(r: 61, g: 91, b: 151)
-		view.addSubview(viewProfilesButton)
-		view.addSubview(logoutButton)
-		
-		setupViewProfilesButton()
-		setupLogoutButton()
-	}
-	
-	@objc func handleLogout() {
-		
-		do {
-			try Auth.auth().signOut()
-		} catch let logoutError {
-			print(logoutError)
-		}
-		
-		let loginController = LoginViewController()
-		present(loginController, animated: true, completion: nil)
+		view.backgroundColor = fitchGray
+        
+        checkIfUserIsLoggedIn()
+		setupViews()
 	}
 	
 	lazy var viewProfilesButton: UIButton = {
 		let button = UIButton(type: .system)
-		button.backgroundColor = UIColor(r: 0, g: 113, b: 188) //fitchike blue
+		button.backgroundColor = fitchBlue
 		button.setTitle("Find Trainers", for: .normal)
 		button.translatesAutoresizingMaskIntoConstraints = false
 		button.setTitleColor(UIColor.white, for: .normal)
 		button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-		
 		button.addTarget(self, action: #selector(handleViewProfiles), for: .touchUpInside)
-		
 		return button
 	}()
+    
+    lazy var myProfileButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = fitchBlue
+        button.setTitle("My Profile", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.addTarget(self, action: #selector(handleViewProfiles), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var workoutHistoryButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = fitchBlue
+        button.setTitle("Workout History", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.addTarget(self, action: #selector(handleViewProfiles), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var socialButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = fitchBlue
+        button.setTitle("Social Feed", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.addTarget(self, action: #selector(handleViewProfiles), for: .touchUpInside)
+        return button
+    }()
 
 	lazy var logoutButton: UIButton = {
 		let button = UIButton(type: .system)
-		button.backgroundColor = UIColor(r: 193, g: 38, b: 44) //fitchike red
+		button.backgroundColor = fitchRed
 		button.setTitle("Logout", for: .normal)
 		button.translatesAutoresizingMaskIntoConstraints = false
 		button.setTitleColor(UIColor.white, for: .normal)
 		button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-		
 		button.addTarget(self, action: #selector(handleLogout), for: .touchUpInside)
-		
 		return button
 	}()
 	
-	@objc func handleViewProfiles(sender: UIButton) {
-		let controller = AllProfilesTableViewController()
-//		present(controller, animated: true, completion: nil)
-		self.navigationController?.pushViewController(controller, animated: true)
-	}
-	
-	
 	//CONSTRAINTS
-	func setupViewProfilesButton() {
-		viewProfilesButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-		viewProfilesButton.topAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-		viewProfilesButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -20).isActive = true
-		viewProfilesButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
-	}
-	
-	func setupLogoutButton() {
-		logoutButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-		logoutButton.topAnchor.constraint(equalTo: viewProfilesButton.bottomAnchor, constant: 25).isActive = true
-		logoutButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -20).isActive = true
-		logoutButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
-	}
+    
+    func setupViews() {
+        view.addSubview(viewProfilesButton)
+        view.addSubview(myProfileButton)
+        view.addSubview(workoutHistoryButton)
+        view.addSubview(socialButton)
+        view.addSubview(logoutButton)
+        
+        viewProfilesButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 100, leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 75)
+
+        myProfileButton.anchor(viewProfilesButton.bottomAnchor, left: viewProfilesButton.leftAnchor, bottom: nil, right: viewProfilesButton.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 75)
+        
+        workoutHistoryButton.anchor(myProfileButton.bottomAnchor, left: viewProfilesButton.leftAnchor, bottom: nil, right: viewProfilesButton.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 75)
+        
+        socialButton.anchor(workoutHistoryButton.bottomAnchor, left: viewProfilesButton.leftAnchor, bottom: nil, right: viewProfilesButton.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 75)
+        
+        logoutButton.anchor(socialButton.bottomAnchor, left: viewProfilesButton.leftAnchor, bottom: nil, right: viewProfilesButton.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 75)
+
+    }
+
 	
 }

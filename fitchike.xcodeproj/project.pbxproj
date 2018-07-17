@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		591B77AB20FD5F57001B8116 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77AA20FD5F57001B8116 /* CustomTabBarController.swift */; };
+		591B77AD20FD67FE001B8116 /* TrainerDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77AC20FD67FE001B8116 /* TrainerDatasource.swift */; };
+		591B77B120FD6935001B8116 /* ProfileHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B020FD6935001B8116 /* ProfileHeaderFooter.swift */; };
+		591B77B320FD69DC001B8116 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B220FD69DC001B8116 /* ProfileCell.swift */; };
+		591B77B520FD6B4F001B8116 /* TrainerDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B420FD6B4F001B8116 /* TrainerDatasourceController.swift */; };
+		591B77B720FD7568001B8116 /* TrainerDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B620FD7568001B8116 /* TrainerDetailController.swift */; };
+		591B77B920FD78D3001B8116 /* homeViewController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B820FD78D3001B8116 /* homeViewController+handlers.swift */; };
 		5991EB56200D1F40002D629A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5991EB55200D1F40002D629A /* Profile.swift */; };
-		5991EB59200D7C63002D629A /* AllProfilesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5991EB58200D7C63002D629A /* AllProfilesTableViewController.swift */; };
 		5997361D200AC3C3007D0F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997361C200AC3C3007D0F50 /* AppDelegate.swift */; };
-		5997361F200AC3C3007D0F50 /* ProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997361E200AC3C3007D0F50 /* ProfilesViewController.swift */; };
 		59973621200AC3C3007D0F50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59973620200AC3C3007D0F50 /* LoginViewController.swift */; };
 		59973624200AC3C3007D0F50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59973622200AC3C3007D0F50 /* Main.storyboard */; };
 		59973626200AC3C3007D0F50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59973625200AC3C3007D0F50 /* Assets.xcassets */; };
@@ -24,11 +29,17 @@
 
 /* Begin PBXFileReference section */
 		52B174514E86DCD7D794145A /* Pods-fitchike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitchike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fitchike/Pods-fitchike.debug.xcconfig"; sourceTree = "<group>"; };
+		591B77A720FD4B88001B8116 /* fitchike.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fitchike.entitlements; sourceTree = "<group>"; };
+		591B77AA20FD5F57001B8116 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		591B77AC20FD67FE001B8116 /* TrainerDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrainerDatasource.swift; path = ../TrainerDatasource.swift; sourceTree = "<group>"; };
+		591B77B020FD6935001B8116 /* ProfileHeaderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderFooter.swift; sourceTree = "<group>"; };
+		591B77B220FD69DC001B8116 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		591B77B420FD6B4F001B8116 /* TrainerDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDatasourceController.swift; sourceTree = "<group>"; };
+		591B77B620FD7568001B8116 /* TrainerDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDetailController.swift; sourceTree = "<group>"; };
+		591B77B820FD78D3001B8116 /* homeViewController+handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "homeViewController+handlers.swift"; sourceTree = "<group>"; };
 		5991EB55200D1F40002D629A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		5991EB58200D7C63002D629A /* AllProfilesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProfilesTableViewController.swift; sourceTree = "<group>"; };
 		59973619200AC3C3007D0F50 /* fitchike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitchike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5997361C200AC3C3007D0F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5997361E200AC3C3007D0F50 /* ProfilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesViewController.swift; sourceTree = "<group>"; };
 		59973620200AC3C3007D0F50 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		59973623200AC3C3007D0F50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59973625200AC3C3007D0F50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,9 +65,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		591B77AE20FD6803001B8116 /* DatasourceFiles */ = {
+			isa = PBXGroup;
+			children = (
+				591B77AC20FD67FE001B8116 /* TrainerDatasource.swift */,
+			);
+			path = DatasourceFiles;
+			sourceTree = "<group>";
+		};
+		591B77AF20FD6889001B8116 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				591B77B020FD6935001B8116 /* ProfileHeaderFooter.swift */,
+				591B77B220FD69DC001B8116 /* ProfileCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5991EB57200D1F4B002D629A /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				591B77AE20FD6803001B8116 /* DatasourceFiles */,
 				5991EB55200D1F40002D629A /* Profile.swift */,
 			);
 			path = DataModel;
@@ -83,9 +112,11 @@
 		5997361B200AC3C3007D0F50 /* fitchike */ = {
 			isa = PBXGroup;
 			children = (
-				59FA722D2018173D005985E7 /* Helpers */,
+				591B77A720FD4B88001B8116 /* fitchike.entitlements */,
 				59973630200AC95D007D0F50 /* Controllers */,
 				5991EB57200D1F4B002D629A /* DataModel */,
+				59FA722D2018173D005985E7 /* Helpers */,
+				591B77AF20FD6889001B8116 /* Views */,
 				5997361C200AC3C3007D0F50 /* AppDelegate.swift */,
 				59973622200AC3C3007D0F50 /* Main.storyboard */,
 				59973625200AC3C3007D0F50 /* Assets.xcassets */,
@@ -99,11 +130,13 @@
 		59973630200AC95D007D0F50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				591B77AA20FD5F57001B8116 /* CustomTabBarController.swift */,
 				59FA722B201785D8005985E7 /* HomeViewController.swift */,
+				591B77B820FD78D3001B8116 /* homeViewController+handlers.swift */,
 				59973620200AC3C3007D0F50 /* LoginViewController.swift */,
 				59B45C6B201593F3005A5B79 /* LoginViewController+handlers.swift */,
-				5997361E200AC3C3007D0F50 /* ProfilesViewController.swift */,
-				5991EB58200D7C63002D629A /* AllProfilesTableViewController.swift */,
+				591B77B420FD6B4F001B8116 /* TrainerDatasourceController.swift */,
+				591B77B620FD7568001B8116 /* TrainerDetailController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -145,7 +178,6 @@
 				59973616200AC3C3007D0F50 /* Frameworks */,
 				59973617200AC3C3007D0F50 /* Resources */,
 				41C653EC44F336BF61F012C2 /* [CP] Embed Pods Frameworks */,
-				D5554ECC48ECFA4D6479E1DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,6 +201,11 @@
 					59973618200AC3C3007D0F50 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -212,9 +249,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-fitchike/Pods-fitchike-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -225,9 +266,13 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -259,21 +304,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D5554ECC48ECFA4D6479E1DE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fitchike/Pods-fitchike-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -281,14 +311,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5991EB59200D7C63002D629A /* AllProfilesTableViewController.swift in Sources */,
+				591B77B120FD6935001B8116 /* ProfileHeaderFooter.swift in Sources */,
 				59B45C6C201593F3005A5B79 /* LoginViewController+handlers.swift in Sources */,
 				5991EB56200D1F40002D629A /* Profile.swift in Sources */,
 				59FA722F2018176E005985E7 /* Extensions.swift in Sources */,
+				591B77AD20FD67FE001B8116 /* TrainerDatasource.swift in Sources */,
 				59973621200AC3C3007D0F50 /* LoginViewController.swift in Sources */,
+				591B77B520FD6B4F001B8116 /* TrainerDatasourceController.swift in Sources */,
+				591B77B720FD7568001B8116 /* TrainerDetailController.swift in Sources */,
 				5997361D200AC3C3007D0F50 /* AppDelegate.swift in Sources */,
 				59FA722C201785D9005985E7 /* HomeViewController.swift in Sources */,
-				5997361F200AC3C3007D0F50 /* ProfilesViewController.swift in Sources */,
+				591B77B320FD69DC001B8116 /* ProfileCell.swift in Sources */,
+				591B77AB20FD5F57001B8116 /* CustomTabBarController.swift in Sources */,
+				591B77B920FD78D3001B8116 /* homeViewController+handlers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +461,7 @@
 			baseConfigurationReference = 52B174514E86DCD7D794145A /* Pods-fitchike.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = fitchike/fitchike.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YZQXJDN28A;
 				INFOPLIST_FILE = fitchike/Info.plist;
@@ -442,6 +478,7 @@
 			baseConfigurationReference = 79BA9112B8E9E474B8826C00 /* Pods-fitchike.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = fitchike/fitchike.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YZQXJDN28A;
 				INFOPLIST_FILE = fitchike/Info.plist;

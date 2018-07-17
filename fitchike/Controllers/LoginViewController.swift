@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LBTAComponents
 import FirebaseAuth
 import FirebaseFirestore
 
@@ -36,27 +37,17 @@ class LoginViewController: UIViewController {
 		
 		return button
 	}()
-	
-	@objc func handleLoginRegister() {
-		if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
-			handleLogin()
-		} else {
-			handleRegister()
-		}
-	}
-	
-	func handleLogin() {
-		guard let email = emailTextField.text, let password = passwordTextField.text else { return }
-		Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-			if error != nil {
-				print(error?.localizedDescription as Any)
-				return
-			}
-			//successfully logged in user
-			self.dismiss(animated: true, completion: nil)
-		}
-	}
-	
+    
+    lazy var facebookLoginButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = UIColor(r: 59, g: 89, b: 152)
+        button.setTitle("Login With Facebook", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.addTarget(self, action: #selector(handleCustomFBLogin), for: .touchUpInside)
+        return button
+    }()
 	
 	let nameTextField: UITextField = {
 		let tf = UITextField()
@@ -117,35 +108,18 @@ class LoginViewController: UIViewController {
 		return sc
 	}()
 	
-	//handles the toggle between login and register
-	@objc func handleLoginRegisterChange() {
-		let title = loginRegisterSegmentedControl.titleForSegment(at: loginRegisterSegmentedControl.selectedSegmentIndex)
-		loginRegisterButton.setTitle(title, for: .normal)
-		//if the index is 0 (i.e. login) set the height to 100, otherwise it is 150
-		inputsContainerViewHeightAnchor?.constant = loginRegisterSegmentedControl.selectedSegmentIndex == 0 ? 100 : 150
-		nameTextFieldHeightAnchor?.isActive = false
-		nameTextFieldHeightAnchor = nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: loginRegisterSegmentedControl.selectedSegmentIndex == 0 ? 0 : 1/3)
-		nameTextFieldHeightAnchor?.isActive = true
-		
-		emailTextFieldHeightAnchor?.isActive = false
-		emailTextFieldHeightAnchor = emailTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: loginRegisterSegmentedControl.selectedSegmentIndex == 0 ? 1/2 : 1/3)
-		emailTextFieldHeightAnchor?.isActive = true
-		
-		passwordTextFieldHeightAnchor?.isActive = false
-		passwordTextFieldHeightAnchor = passwordTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: loginRegisterSegmentedControl.selectedSegmentIndex == 0 ? 1/2 : 1/3)
-		passwordTextFieldHeightAnchor?.isActive = true
 
-	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = UIColor(r: 0, g: 42, b: 69) //dark blue back
 		view.addSubview(inputsContainerView)
 		view.addSubview(loginRegisterButton)
+        view.addSubview(facebookLoginButton)
 		view.addSubview(profileImageView)
 		view.addSubview(loginRegisterSegmentedControl)
 		setupInputsContainerView()
-		setupLoginRegisterButton()
+		setupButtons()
 		setupProfileImageView()
 		setupLoginRegisterSegmentedcontrol()
 	}
@@ -213,11 +187,14 @@ class LoginViewController: UIViewController {
 		
 	}
 	
-	func setupLoginRegisterButton() {
+	func setupButtons() {
+        
 		loginRegisterButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 		loginRegisterButton.topAnchor.constraint(equalTo: inputsContainerView.bottomAnchor, constant: 12).isActive = true
 		loginRegisterButton.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
 		loginRegisterButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        facebookLoginButton.anchor(loginRegisterButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: nil, right: loginRegisterButton.rightAnchor, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 50)
 	}
 	
 	override var preferredStatusBarStyle: UIStatusBarStyle {
