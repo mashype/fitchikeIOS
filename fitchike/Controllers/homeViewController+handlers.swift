@@ -20,8 +20,13 @@ extension HomeViewController {
     }
     
     @objc func handleViewProfiles(sender: UIButton) {
-        let controller = TrainerDatasourceController()
+        let controller = TrainerListDatasourceController()
         //        present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func handleTrainerDetailTest() {
+        let controller = TrainerDetailDatasourceController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
     

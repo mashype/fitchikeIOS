@@ -13,21 +13,19 @@ import UIKit
 var profileArray = [Profile]()
 
 
-class TrainerDatasource: Datasource {
+class TrainerListDatasource: Datasource {
     
     override func cellClasses() -> [DatasourceCell.Type] {
-        return [ProfileCell.self]
+        return [TrainerListCell.self]
     }
     
     override func headerClasses() -> [DatasourceCell.Type]? {
-        return [ProfileHeader.self]
+        return [TrainerListHeader.self]
     }
     
     override func footerClasses() -> [DatasourceCell.Type]? {
-        return [ProfileFooter.self]
+        return [TrainerListFooter.self]
     }
-    
-    
     
     override func item(_ indexPath: IndexPath) -> Any? {
         return profileArray[indexPath.item]

@@ -50,7 +50,7 @@ class HomeViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        button.addTarget(self, action: #selector(handleViewProfiles), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleTrainerDetailTest), for: .touchUpInside)
         return button
     }()
     

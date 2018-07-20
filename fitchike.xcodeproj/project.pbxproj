@@ -8,20 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		591B77AB20FD5F57001B8116 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77AA20FD5F57001B8116 /* CustomTabBarController.swift */; };
-		591B77AD20FD67FE001B8116 /* TrainerDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77AC20FD67FE001B8116 /* TrainerDatasource.swift */; };
-		591B77B120FD6935001B8116 /* ProfileHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B020FD6935001B8116 /* ProfileHeaderFooter.swift */; };
+		591B77AD20FD67FE001B8116 /* TrainerListDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77AC20FD67FE001B8116 /* TrainerListDatasource.swift */; };
+		591B77B120FD6935001B8116 /* StandardHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B020FD6935001B8116 /* StandardHeaderFooter.swift */; };
 		591B77B320FD69DC001B8116 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B220FD69DC001B8116 /* ProfileCell.swift */; };
-		591B77B520FD6B4F001B8116 /* TrainerDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B420FD6B4F001B8116 /* TrainerDatasourceController.swift */; };
+		591B77B520FD6B4F001B8116 /* TrainerListDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B420FD6B4F001B8116 /* TrainerListDatasourceController.swift */; };
 		591B77B720FD7568001B8116 /* TrainerDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B620FD7568001B8116 /* TrainerDetailController.swift */; };
 		591B77B920FD78D3001B8116 /* homeViewController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B820FD78D3001B8116 /* homeViewController+handlers.swift */; };
 		5991EB56200D1F40002D629A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5991EB55200D1F40002D629A /* Profile.swift */; };
 		5997361D200AC3C3007D0F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997361C200AC3C3007D0F50 /* AppDelegate.swift */; };
 		59973621200AC3C3007D0F50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59973620200AC3C3007D0F50 /* LoginViewController.swift */; };
-		59973624200AC3C3007D0F50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59973622200AC3C3007D0F50 /* Main.storyboard */; };
 		59973626200AC3C3007D0F50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59973625200AC3C3007D0F50 /* Assets.xcassets */; };
-		59973629200AC3C3007D0F50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59973627200AC3C3007D0F50 /* LaunchScreen.storyboard */; };
 		59A4B2E02013FE1E00F6CF13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59A4B2DF2013FE1E00F6CF13 /* GoogleService-Info.plist */; };
 		59B45C6C201593F3005A5B79 /* LoginViewController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B45C6B201593F3005A5B79 /* LoginViewController+handlers.swift */; };
+		59B5284320FF0AED005AF8E0 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5284220FF0AED005AF8E0 /* ProfileController.swift */; };
+		59B5284721005910005AF8E0 /* TrainerDetailDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5284621005910005AF8E0 /* TrainerDetailDatasourceController.swift */; };
+		59B52849210060C0005AF8E0 /* TrainerDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B52848210060C0005AF8E0 /* TrainerDetailCell.swift */; };
+		59B5284B210060F4005AF8E0 /* TrainerDetailDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5284A210060F4005AF8E0 /* TrainerDetailDatasource.swift */; };
+		59B5284D21013A6C005AF8E0 /* TrainerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5284C21013A6C005AF8E0 /* TrainerListCell.swift */; };
 		59FA722C201785D9005985E7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FA722B201785D8005985E7 /* HomeViewController.swift */; };
 		59FA722F2018176E005985E7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FA722E2018176E005985E7 /* Extensions.swift */; };
 		E8D198425DD2B63567F2678B /* Pods_fitchike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFD91FD4B92250092CFC60C /* Pods_fitchike.framework */; };
@@ -31,22 +34,25 @@
 		52B174514E86DCD7D794145A /* Pods-fitchike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitchike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fitchike/Pods-fitchike.debug.xcconfig"; sourceTree = "<group>"; };
 		591B77A720FD4B88001B8116 /* fitchike.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fitchike.entitlements; sourceTree = "<group>"; };
 		591B77AA20FD5F57001B8116 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
-		591B77AC20FD67FE001B8116 /* TrainerDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrainerDatasource.swift; path = ../TrainerDatasource.swift; sourceTree = "<group>"; };
-		591B77B020FD6935001B8116 /* ProfileHeaderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderFooter.swift; sourceTree = "<group>"; };
+		591B77AC20FD67FE001B8116 /* TrainerListDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrainerListDatasource.swift; path = ../TrainerListDatasource.swift; sourceTree = "<group>"; };
+		591B77B020FD6935001B8116 /* StandardHeaderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHeaderFooter.swift; sourceTree = "<group>"; };
 		591B77B220FD69DC001B8116 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
-		591B77B420FD6B4F001B8116 /* TrainerDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDatasourceController.swift; sourceTree = "<group>"; };
+		591B77B420FD6B4F001B8116 /* TrainerListDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerListDatasourceController.swift; sourceTree = "<group>"; };
 		591B77B620FD7568001B8116 /* TrainerDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDetailController.swift; sourceTree = "<group>"; };
 		591B77B820FD78D3001B8116 /* homeViewController+handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "homeViewController+handlers.swift"; sourceTree = "<group>"; };
 		5991EB55200D1F40002D629A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		59973619200AC3C3007D0F50 /* fitchike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitchike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5997361C200AC3C3007D0F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59973620200AC3C3007D0F50 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		59973623200AC3C3007D0F50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59973625200AC3C3007D0F50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		59973628200AC3C3007D0F50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5997362A200AC3C3007D0F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59A4B2DF2013FE1E00F6CF13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		59B45C6B201593F3005A5B79 /* LoginViewController+handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LoginViewController+handlers.swift"; path = "fitchike/controllers/LoginViewController+handlers.swift"; sourceTree = SOURCE_ROOT; };
+		59B5284220FF0AED005AF8E0 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		59B5284621005910005AF8E0 /* TrainerDetailDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDetailDatasourceController.swift; sourceTree = "<group>"; };
+		59B52848210060C0005AF8E0 /* TrainerDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDetailCell.swift; sourceTree = "<group>"; };
+		59B5284A210060F4005AF8E0 /* TrainerDetailDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDetailDatasource.swift; sourceTree = "<group>"; };
+		59B5284C21013A6C005AF8E0 /* TrainerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerListCell.swift; sourceTree = "<group>"; };
 		59FA722B201785D8005985E7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		59FA722E2018176E005985E7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		79BA9112B8E9E474B8826C00 /* Pods-fitchike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitchike.release.xcconfig"; path = "Pods/Target Support Files/Pods-fitchike/Pods-fitchike.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,7 +74,8 @@
 		591B77AE20FD6803001B8116 /* DatasourceFiles */ = {
 			isa = PBXGroup;
 			children = (
-				591B77AC20FD67FE001B8116 /* TrainerDatasource.swift */,
+				591B77AC20FD67FE001B8116 /* TrainerListDatasource.swift */,
+				59B5284A210060F4005AF8E0 /* TrainerDetailDatasource.swift */,
 			);
 			path = DatasourceFiles;
 			sourceTree = "<group>";
@@ -76,8 +83,10 @@
 		591B77AF20FD6889001B8116 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				591B77B020FD6935001B8116 /* ProfileHeaderFooter.swift */,
 				591B77B220FD69DC001B8116 /* ProfileCell.swift */,
+				591B77B020FD6935001B8116 /* StandardHeaderFooter.swift */,
+				59B52848210060C0005AF8E0 /* TrainerDetailCell.swift */,
+				59B5284C21013A6C005AF8E0 /* TrainerListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,9 +127,7 @@
 				59FA722D2018173D005985E7 /* Helpers */,
 				591B77AF20FD6889001B8116 /* Views */,
 				5997361C200AC3C3007D0F50 /* AppDelegate.swift */,
-				59973622200AC3C3007D0F50 /* Main.storyboard */,
 				59973625200AC3C3007D0F50 /* Assets.xcassets */,
-				59973627200AC3C3007D0F50 /* LaunchScreen.storyboard */,
 				5997362A200AC3C3007D0F50 /* Info.plist */,
 				59A4B2DF2013FE1E00F6CF13 /* GoogleService-Info.plist */,
 			);
@@ -135,8 +142,10 @@
 				591B77B820FD78D3001B8116 /* homeViewController+handlers.swift */,
 				59973620200AC3C3007D0F50 /* LoginViewController.swift */,
 				59B45C6B201593F3005A5B79 /* LoginViewController+handlers.swift */,
-				591B77B420FD6B4F001B8116 /* TrainerDatasourceController.swift */,
 				591B77B620FD7568001B8116 /* TrainerDetailController.swift */,
+				59B5284621005910005AF8E0 /* TrainerDetailDatasourceController.swift */,
+				591B77B420FD6B4F001B8116 /* TrainerListDatasourceController.swift */,
+				59B5284220FF0AED005AF8E0 /* ProfileController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -232,10 +241,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59973629200AC3C3007D0F50 /* LaunchScreen.storyboard in Resources */,
 				59A4B2E02013FE1E00F6CF13 /* GoogleService-Info.plist in Resources */,
 				59973626200AC3C3007D0F50 /* Assets.xcassets in Resources */,
-				59973624200AC3C3007D0F50 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,15 +318,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				591B77B120FD6935001B8116 /* ProfileHeaderFooter.swift in Sources */,
+				59B5284721005910005AF8E0 /* TrainerDetailDatasourceController.swift in Sources */,
+				591B77B120FD6935001B8116 /* StandardHeaderFooter.swift in Sources */,
 				59B45C6C201593F3005A5B79 /* LoginViewController+handlers.swift in Sources */,
 				5991EB56200D1F40002D629A /* Profile.swift in Sources */,
 				59FA722F2018176E005985E7 /* Extensions.swift in Sources */,
-				591B77AD20FD67FE001B8116 /* TrainerDatasource.swift in Sources */,
+				591B77AD20FD67FE001B8116 /* TrainerListDatasource.swift in Sources */,
 				59973621200AC3C3007D0F50 /* LoginViewController.swift in Sources */,
-				591B77B520FD6B4F001B8116 /* TrainerDatasourceController.swift in Sources */,
+				591B77B520FD6B4F001B8116 /* TrainerListDatasourceController.swift in Sources */,
+				59B5284320FF0AED005AF8E0 /* ProfileController.swift in Sources */,
 				591B77B720FD7568001B8116 /* TrainerDetailController.swift in Sources */,
+				59B5284B210060F4005AF8E0 /* TrainerDetailDatasource.swift in Sources */,
+				59B52849210060C0005AF8E0 /* TrainerDetailCell.swift in Sources */,
 				5997361D200AC3C3007D0F50 /* AppDelegate.swift in Sources */,
+				59B5284D21013A6C005AF8E0 /* TrainerListCell.swift in Sources */,
 				59FA722C201785D9005985E7 /* HomeViewController.swift in Sources */,
 				591B77B320FD69DC001B8116 /* ProfileCell.swift in Sources */,
 				591B77AB20FD5F57001B8116 /* CustomTabBarController.swift in Sources */,
@@ -328,25 +340,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		59973622200AC3C3007D0F50 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				59973623200AC3C3007D0F50 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		59973627200AC3C3007D0F50 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				59973628200AC3C3007D0F50 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5997362B200AC3C3007D0F50 /* Debug */ = {

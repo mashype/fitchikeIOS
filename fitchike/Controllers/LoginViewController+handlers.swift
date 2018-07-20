@@ -12,7 +12,7 @@ import Firebase
 
 
 extension LoginViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate, FBSDKLoginButtonDelegate {
-	
+    
     @objc func handleLoginRegister() {
         if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
             handleLogin()
@@ -34,6 +34,11 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
     }
     
 	@objc func handleRegister() {
+        
+        //need to fix the load of the quote and the bio field.
+        var bio = ""
+        var quote = ""
+        
 		guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else { return }
 		Auth.auth().createUser(withEmail: email, password: password) { (user: User?, error) in
 			if error != nil {
@@ -52,11 +57,9 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
 						print(error as Any)
 						return
 					}
-					
 					if let profileImageURL = metadata?.downloadURL()?.absoluteString {
-						self.registerUserIntoDatabaseWithUID(uid: uid, name: name, email: email, profileImageURL: profileImageURL)
+                        self.registerUserIntoDatabaseWithUID(uid: uid, name: name, email: email, bio: bio, quote: quote, profileImageURL: profileImageURL)
 					}
-					
 				})
 			}
 		}
@@ -104,6 +107,7 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
             print("error logging in \(error)")
         }
         showEmailAddress()
+
     }
     
     func showEmailAddress() {
@@ -119,6 +123,7 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
                 return
             }
             //successfully logged in user
+            self.updateUserProfile()
             self.dismiss(animated: true, completion: nil)
             print("Successfully logged in with user", user as Any)
         }
@@ -131,13 +136,28 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
             print("Here is your user data:", result as Any)
         }
     }
+    
+    //Creating a function to create/update a profile/user record from FB account.
+    @objc func updateUserProfile() {
+        
+        //need to fix the load of the quote and the bio field.
+        var bio = ""
+        var quote = ""
+        
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if user != nil {
+                guard let uid = user?.uid, let name = user?.displayName, let email = user?.email, let profileImageURL = user?.photoURL?.absoluteString else { return }
+                self.registerUserIntoDatabaseWithUID(uid: uid, name: name, email: email, bio: bio, quote: quote, profileImageURL: profileImageURL)
+            }
+        }
+    }
 	
 	
-	private func registerUserIntoDatabaseWithUID(uid: String, name: String, email: String, profileImageURL: String) {
+    private func registerUserIntoDatabaseWithUID(uid: String, name: String, email: String, bio: String, quote: String, profileImageURL: String) {
 		
 		let db = Firestore.firestore()
 		let usersReference = db.collection("users")
-		let newProfile = Profile(email: email, name: name, timeStamp: Date(), profileImageURL: profileImageURL)
+        let newProfile = Profile(email: email, name: name, quote: quote, bio: bio, timeStamp: Date(), profileImageURL: profileImageURL)
 
 		usersReference.document(uid).setData(newProfile.dictionary, completion: { (usererror) in
 			
@@ -146,6 +166,7 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
 				return
 			}
 			//sucessfully added the user
+            print("We've loaded the user")
 			self.dismiss(animated: true, completion: nil)
 		})
 		
