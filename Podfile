@@ -11,4 +11,7 @@ target 'fitchike' do
     pod 'FBSDKLoginKit'
     pod 'LBTAComponents'
     
+    pod 'Stripe'
+    pod 'Alamofire'
+    
 end

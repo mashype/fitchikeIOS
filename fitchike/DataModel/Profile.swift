@@ -8,12 +8,10 @@
 
 
 import Foundation
-import FirebaseFirestore
 
 protocol DocumentSerializable  {
 	init?(dictionary:[String:Any])
 }
-
 
 struct Profile {
 	var email:String?
@@ -31,10 +29,8 @@ struct Profile {
             "bio":bio as Any,
 			"timeStamp":timeStamp as Any,
 			"profileImageURL":profileImageURL as Any
-			
 		]
-	}
-	
+	}	
 }
 
 extension Profile : DocumentSerializable {

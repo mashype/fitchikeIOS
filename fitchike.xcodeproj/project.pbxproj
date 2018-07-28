@@ -10,10 +10,18 @@
 		591B77AB20FD5F57001B8116 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77AA20FD5F57001B8116 /* CustomTabBarController.swift */; };
 		591B77AD20FD67FE001B8116 /* TrainerListDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77AC20FD67FE001B8116 /* TrainerListDatasource.swift */; };
 		591B77B120FD6935001B8116 /* StandardHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B020FD6935001B8116 /* StandardHeaderFooter.swift */; };
-		591B77B320FD69DC001B8116 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B220FD69DC001B8116 /* ProfileCell.swift */; };
 		591B77B520FD6B4F001B8116 /* TrainerListDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B420FD6B4F001B8116 /* TrainerListDatasourceController.swift */; };
-		591B77B720FD7568001B8116 /* TrainerDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B620FD7568001B8116 /* TrainerDetailController.swift */; };
-		591B77B920FD78D3001B8116 /* homeViewController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B820FD78D3001B8116 /* homeViewController+handlers.swift */; };
+		591B77B920FD78D3001B8116 /* HomeViewController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B77B820FD78D3001B8116 /* HomeViewController+handlers.swift */; };
+		5920940D2108C6F7007D2114 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5920940C2108C6F7007D2114 /* Booking.swift */; };
+		5920940F2108CB87007D2114 /* BookingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5920940E2108CB87007D2114 /* BookingController.swift */; };
+		592094112108F702007D2114 /* TrainerDetailDatasourceController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592094102108F702007D2114 /* TrainerDetailDatasourceController+handlers.swift */; };
+		5920941B210BD5CC007D2114 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59209413210BD5CA007D2114 /* Buttons.swift */; };
+		5920941C210BD5CC007D2114 /* BrowseProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59209414210BD5CA007D2114 /* BrowseProductsViewController.swift */; };
+		5920941D210BD5CC007D2114 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59209415210BD5CA007D2114 /* SettingsViewController.swift */; };
+		5920941F210BD5CC007D2114 /* CheckoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59209417210BD5CB007D2114 /* CheckoutRowView.swift */; };
+		59209420210BD5CC007D2114 /* PaymentContextFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59209418210BD5CB007D2114 /* PaymentContextFooterView.swift */; };
+		59209421210BD5CC007D2114 /* MyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59209419210BD5CC007D2114 /* MyAPIClient.swift */; };
+		59209422210BD5CC007D2114 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5920941A210BD5CC007D2114 /* CheckoutViewController.swift */; };
 		5991EB56200D1F40002D629A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5991EB55200D1F40002D629A /* Profile.swift */; };
 		5997361D200AC3C3007D0F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997361C200AC3C3007D0F50 /* AppDelegate.swift */; };
 		59973621200AC3C3007D0F50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59973620200AC3C3007D0F50 /* LoginViewController.swift */; };
@@ -22,9 +30,11 @@
 		59B45C6C201593F3005A5B79 /* LoginViewController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B45C6B201593F3005A5B79 /* LoginViewController+handlers.swift */; };
 		59B5284320FF0AED005AF8E0 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5284220FF0AED005AF8E0 /* ProfileController.swift */; };
 		59B5284721005910005AF8E0 /* TrainerDetailDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5284621005910005AF8E0 /* TrainerDetailDatasourceController.swift */; };
-		59B52849210060C0005AF8E0 /* TrainerDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B52848210060C0005AF8E0 /* TrainerDetailCell.swift */; };
+		59B52849210060C0005AF8E0 /* TestCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B52848210060C0005AF8E0 /* TestCells.swift */; };
 		59B5284B210060F4005AF8E0 /* TrainerDetailDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5284A210060F4005AF8E0 /* TrainerDetailDatasource.swift */; };
 		59B5284D21013A6C005AF8E0 /* TrainerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5284C21013A6C005AF8E0 /* TrainerListCell.swift */; };
+		59B5284F21038DAC005AF8E0 /* TrainerListDatasourceController+navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5284E21038DAC005AF8E0 /* TrainerListDatasourceController+navbar.swift */; };
+		59B528512103ABE1005AF8E0 /* TrainerDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B528502103ABE1005AF8E0 /* TrainerDetailCell.swift */; };
 		59FA722C201785D9005985E7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FA722B201785D8005985E7 /* HomeViewController.swift */; };
 		59FA722F2018176E005985E7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FA722E2018176E005985E7 /* Extensions.swift */; };
 		E8D198425DD2B63567F2678B /* Pods_fitchike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFD91FD4B92250092CFC60C /* Pods_fitchike.framework */; };
@@ -36,10 +46,18 @@
 		591B77AA20FD5F57001B8116 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		591B77AC20FD67FE001B8116 /* TrainerListDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrainerListDatasource.swift; path = ../TrainerListDatasource.swift; sourceTree = "<group>"; };
 		591B77B020FD6935001B8116 /* StandardHeaderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHeaderFooter.swift; sourceTree = "<group>"; };
-		591B77B220FD69DC001B8116 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		591B77B420FD6B4F001B8116 /* TrainerListDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerListDatasourceController.swift; sourceTree = "<group>"; };
-		591B77B620FD7568001B8116 /* TrainerDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDetailController.swift; sourceTree = "<group>"; };
-		591B77B820FD78D3001B8116 /* homeViewController+handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "homeViewController+handlers.swift"; sourceTree = "<group>"; };
+		591B77B820FD78D3001B8116 /* HomeViewController+handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+handlers.swift"; sourceTree = "<group>"; };
+		5920940C2108C6F7007D2114 /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
+		5920940E2108CB87007D2114 /* BookingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingController.swift; sourceTree = "<group>"; };
+		592094102108F702007D2114 /* TrainerDetailDatasourceController+handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrainerDetailDatasourceController+handlers.swift"; sourceTree = "<group>"; };
+		59209413210BD5CA007D2114 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		59209414210BD5CA007D2114 /* BrowseProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseProductsViewController.swift; sourceTree = "<group>"; };
+		59209415210BD5CA007D2114 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		59209417210BD5CB007D2114 /* CheckoutRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutRowView.swift; sourceTree = "<group>"; };
+		59209418210BD5CB007D2114 /* PaymentContextFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentContextFooterView.swift; sourceTree = "<group>"; };
+		59209419210BD5CC007D2114 /* MyAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAPIClient.swift; sourceTree = "<group>"; };
+		5920941A210BD5CC007D2114 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		5991EB55200D1F40002D629A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		59973619200AC3C3007D0F50 /* fitchike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitchike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5997361C200AC3C3007D0F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,9 +68,11 @@
 		59B45C6B201593F3005A5B79 /* LoginViewController+handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LoginViewController+handlers.swift"; path = "fitchike/controllers/LoginViewController+handlers.swift"; sourceTree = SOURCE_ROOT; };
 		59B5284220FF0AED005AF8E0 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		59B5284621005910005AF8E0 /* TrainerDetailDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDetailDatasourceController.swift; sourceTree = "<group>"; };
-		59B52848210060C0005AF8E0 /* TrainerDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDetailCell.swift; sourceTree = "<group>"; };
+		59B52848210060C0005AF8E0 /* TestCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCells.swift; sourceTree = "<group>"; };
 		59B5284A210060F4005AF8E0 /* TrainerDetailDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDetailDatasource.swift; sourceTree = "<group>"; };
 		59B5284C21013A6C005AF8E0 /* TrainerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerListCell.swift; sourceTree = "<group>"; };
+		59B5284E21038DAC005AF8E0 /* TrainerListDatasourceController+navbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrainerListDatasourceController+navbar.swift"; sourceTree = "<group>"; };
+		59B528502103ABE1005AF8E0 /* TrainerDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDetailCell.swift; sourceTree = "<group>"; };
 		59FA722B201785D8005985E7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		59FA722E2018176E005985E7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		79BA9112B8E9E474B8826C00 /* Pods-fitchike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitchike.release.xcconfig"; path = "Pods/Target Support Files/Pods-fitchike/Pods-fitchike.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,12 +103,26 @@
 		591B77AF20FD6889001B8116 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				591B77B220FD69DC001B8116 /* ProfileCell.swift */,
+				59B52848210060C0005AF8E0 /* TestCells.swift */,
 				591B77B020FD6935001B8116 /* StandardHeaderFooter.swift */,
-				59B52848210060C0005AF8E0 /* TrainerDetailCell.swift */,
+				59B528502103ABE1005AF8E0 /* TrainerDetailCell.swift */,
 				59B5284C21013A6C005AF8E0 /* TrainerListCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		59209412210BD5A3007D2114 /* Stripe */ = {
+			isa = PBXGroup;
+			children = (
+				59209414210BD5CA007D2114 /* BrowseProductsViewController.swift */,
+				59209413210BD5CA007D2114 /* Buttons.swift */,
+				59209417210BD5CB007D2114 /* CheckoutRowView.swift */,
+				5920941A210BD5CC007D2114 /* CheckoutViewController.swift */,
+				59209419210BD5CC007D2114 /* MyAPIClient.swift */,
+				59209418210BD5CB007D2114 /* PaymentContextFooterView.swift */,
+				59209415210BD5CA007D2114 /* SettingsViewController.swift */,
+			);
+			path = Stripe;
 			sourceTree = "<group>";
 		};
 		5991EB57200D1F4B002D629A /* DataModel */ = {
@@ -96,6 +130,7 @@
 			children = (
 				591B77AE20FD6803001B8116 /* DatasourceFiles */,
 				5991EB55200D1F40002D629A /* Profile.swift */,
+				5920940C2108C6F7007D2114 /* Booking.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -125,6 +160,7 @@
 				59973630200AC95D007D0F50 /* Controllers */,
 				5991EB57200D1F4B002D629A /* DataModel */,
 				59FA722D2018173D005985E7 /* Helpers */,
+				59209412210BD5A3007D2114 /* Stripe */,
 				591B77AF20FD6889001B8116 /* Views */,
 				5997361C200AC3C3007D0F50 /* AppDelegate.swift */,
 				59973625200AC3C3007D0F50 /* Assets.xcassets */,
@@ -137,14 +173,16 @@
 		59973630200AC95D007D0F50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5920940E2108CB87007D2114 /* BookingController.swift */,
 				591B77AA20FD5F57001B8116 /* CustomTabBarController.swift */,
 				59FA722B201785D8005985E7 /* HomeViewController.swift */,
-				591B77B820FD78D3001B8116 /* homeViewController+handlers.swift */,
+				591B77B820FD78D3001B8116 /* HomeViewController+handlers.swift */,
 				59973620200AC3C3007D0F50 /* LoginViewController.swift */,
 				59B45C6B201593F3005A5B79 /* LoginViewController+handlers.swift */,
-				591B77B620FD7568001B8116 /* TrainerDetailController.swift */,
 				59B5284621005910005AF8E0 /* TrainerDetailDatasourceController.swift */,
+				592094102108F702007D2114 /* TrainerDetailDatasourceController+handlers.swift */,
 				591B77B420FD6B4F001B8116 /* TrainerListDatasourceController.swift */,
+				59B5284E21038DAC005AF8E0 /* TrainerListDatasourceController+navbar.swift */,
 				59B5284220FF0AED005AF8E0 /* ProfileController.swift */,
 			);
 			path = Controllers;
@@ -204,7 +242,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = leftyseth;
 				TargetAttributes = {
 					59973618200AC3C3007D0F50 = {
@@ -256,6 +294,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-fitchike/Pods-fitchike-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
@@ -264,6 +303,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
@@ -273,6 +313,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
@@ -281,6 +322,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
@@ -319,23 +361,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				59B5284721005910005AF8E0 /* TrainerDetailDatasourceController.swift in Sources */,
+				59B5284F21038DAC005AF8E0 /* TrainerListDatasourceController+navbar.swift in Sources */,
 				591B77B120FD6935001B8116 /* StandardHeaderFooter.swift in Sources */,
+				59209421210BD5CC007D2114 /* MyAPIClient.swift in Sources */,
+				5920941B210BD5CC007D2114 /* Buttons.swift in Sources */,
 				59B45C6C201593F3005A5B79 /* LoginViewController+handlers.swift in Sources */,
 				5991EB56200D1F40002D629A /* Profile.swift in Sources */,
 				59FA722F2018176E005985E7 /* Extensions.swift in Sources */,
 				591B77AD20FD67FE001B8116 /* TrainerListDatasource.swift in Sources */,
+				5920940D2108C6F7007D2114 /* Booking.swift in Sources */,
+				59209422210BD5CC007D2114 /* CheckoutViewController.swift in Sources */,
 				59973621200AC3C3007D0F50 /* LoginViewController.swift in Sources */,
 				591B77B520FD6B4F001B8116 /* TrainerListDatasourceController.swift in Sources */,
 				59B5284320FF0AED005AF8E0 /* ProfileController.swift in Sources */,
-				591B77B720FD7568001B8116 /* TrainerDetailController.swift in Sources */,
 				59B5284B210060F4005AF8E0 /* TrainerDetailDatasource.swift in Sources */,
-				59B52849210060C0005AF8E0 /* TrainerDetailCell.swift in Sources */,
+				592094112108F702007D2114 /* TrainerDetailDatasourceController+handlers.swift in Sources */,
+				59B52849210060C0005AF8E0 /* TestCells.swift in Sources */,
 				5997361D200AC3C3007D0F50 /* AppDelegate.swift in Sources */,
+				5920941F210BD5CC007D2114 /* CheckoutRowView.swift in Sources */,
 				59B5284D21013A6C005AF8E0 /* TrainerListCell.swift in Sources */,
+				5920940F2108CB87007D2114 /* BookingController.swift in Sources */,
 				59FA722C201785D9005985E7 /* HomeViewController.swift in Sources */,
-				591B77B320FD69DC001B8116 /* ProfileCell.swift in Sources */,
+				59B528512103ABE1005AF8E0 /* TrainerDetailCell.swift in Sources */,
+				59209420210BD5CC007D2114 /* PaymentContextFooterView.swift in Sources */,
 				591B77AB20FD5F57001B8116 /* CustomTabBarController.swift in Sources */,
-				591B77B920FD78D3001B8116 /* homeViewController+handlers.swift in Sources */,
+				5920941C210BD5CC007D2114 /* BrowseProductsViewController.swift in Sources */,
+				591B77B920FD78D3001B8116 /* HomeViewController+handlers.swift in Sources */,
+				5920941D210BD5CC007D2114 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +408,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -363,6 +416,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -413,6 +467,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -420,6 +475,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

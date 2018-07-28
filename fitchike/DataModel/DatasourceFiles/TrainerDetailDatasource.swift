@@ -8,21 +8,21 @@
 
 import LBTAComponents
 
+var selectedProfile = Profile() //globabl variable for the currently selected trainer profile
 
+//NOT USING THIS RIGHT NOW
 class TrainerDetailDatasource: Datasource {
     
-    let elements = ["Certifications", "Addresses", "Reviews"]
-    
+    let trainerSpecs = ["Certifications", "Addresses", "Reviews"]
     let test = ["po1", "poo2"]
-    
-    //thrse are returning as arrays so that the collection view can have multple sections.
-    
+
+    //these are returning as arrays so that the collection view can have multple sections.
     override func numberOfSections() -> Int {
-        return 2
+        return 3
     }
     
     override func cellClasses() -> [DatasourceCell.Type] {
-        return [ElementCell.self, TestCell.self]
+        return [TrainerDetailCell.self, TrainerSpecCell.self, Section2Cell.self]
     }
     
     override func headerClasses() -> [DatasourceCell.Type]? {
@@ -35,8 +35,12 @@ class TrainerDetailDatasource: Datasource {
     
     override func item(_ indexPath: IndexPath) -> Any? {
         if indexPath.section == 0 {
-            return elements[indexPath.item]
-        } else {
+            return selectedProfile
+        }
+        else if indexPath.section == 1 {
+            return trainerSpecs[indexPath.item]
+        }
+        else {
             return test[indexPath.item]
         }
     }
@@ -44,8 +48,12 @@ class TrainerDetailDatasource: Datasource {
     override func numberOfItems(_ section: Int) -> Int {
         
         if section == 0 {
-            return elements.count
-        } else {
+            return 1
+        }
+        else if section == 1 {
+            return trainerSpecs.count
+        }
+        else {
             return test.count
         }
     }

@@ -22,6 +22,9 @@ class TrainerListHeader: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
         backgroundColor = fitchBlue
         
         addSubview(headerLabel)
@@ -42,6 +45,7 @@ class TrainerListFooter: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        backgroundColor = .white
         
         addSubview(footerLabel)
         
@@ -67,7 +71,6 @@ class TrainerListCell: DatasourceCell {
         }
     }
     
-    
     //MARK:- Label constants
     
     let nameLabel: UILabel = {
@@ -83,18 +86,20 @@ class TrainerListCell: DatasourceCell {
         return label
     }()
     
-    let bookButton: UIButton = {
-        let button = UIButton()
+    lazy var bookButton: UIButton = {
+        let button = UIButton(type: .system)
         button.layer.cornerRadius = 5
         button.layer.borderColor = fitchBlue.cgColor
         button.layer.borderWidth = 1
-        button.setTitle("Book Now", for: .normal)
+        button.setTitle("Schedule", for: .normal)
         button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 0)
         button.setTitleColor(fitchBlue, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        button.setImage(#imageLiteral(resourceName: "approval"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "calendar"), for: .normal)
+        button.tintColor = fitchBlue
         button.imageView?.contentMode = .scaleAspectFit
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 0)
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -16, bottom: 0, right: 0)
+        button.addTarget(self, action: #selector(notifyOpenTrainerDetail), for: .touchUpInside)
         return button
     }()
     
@@ -116,6 +121,11 @@ class TrainerListCell: DatasourceCell {
         
         super.setupViews()
         
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
+        
+        backgroundColor = .white
+        
         addSubview(nameLabel)
         addSubview(quoteLabel)
         addSubview(bookButton)
@@ -133,5 +143,12 @@ class TrainerListCell: DatasourceCell {
         bioTextView.anchor(quoteLabel.bottomAnchor, left: nameLabel.leftAnchor, bottom: self.bottomAnchor, right: bookButton.rightAnchor, topConstant: -4, leftConstant: -4, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
     }
+    
+    //posts a notification that the button has been pushed and will be listened for by the TrainerListDatasource controller
+    @objc func notifyOpenTrainerDetail() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "notifyOpenTrainerDetail"), object: nil)
+    }
+    
+
 }
 

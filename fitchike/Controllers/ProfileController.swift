@@ -12,37 +12,15 @@ import Firebase
 
 class ProfileController: UIViewController {
 
-    var profile = Profile()
-    
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        fetchUser()
+        print("TEST, test", currentUser)
+        //reset the titles with any updates to the currentUser
+        setupTitles()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        setupTitles()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(handleCancel))
-    }
-    
-    func fetchUser() {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        
-        let userRef = db.collection("users").document(uid)
-        userRef.getDocument { (document, error) in
-            if error != nil {
-                print(error as Any)
-            } else {
-                self.profile = Profile(dictionary: (document?.data())!)!
-                DispatchQueue.main.async {
-                    self.setupTitles()
-                    print("Heres the profile", self.profile)
-                }
-                self.navigationItem.title = self.profile.name
-                
-            }
-        }
     }
     
     
@@ -66,7 +44,7 @@ class ProfileController: UIViewController {
         
         let nameLabel: UITextView = {
             let label = UITextView()
-            label.text = profile.name
+            label.text = currentUser.name
             label.font = UIFont.systemFont(ofSize: 16)
             return label
         }()

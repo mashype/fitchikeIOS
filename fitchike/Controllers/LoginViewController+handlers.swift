@@ -21,50 +21,6 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
         }
     }
     
-    func handleLogin() {
-        guard let email = emailTextField.text, let password = passwordTextField.text else { return }
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            if error != nil {
-                print(error?.localizedDescription as Any)
-                return
-            }
-            //successfully logged in user
-            self.dismiss(animated: true, completion: nil)
-        }
-    }
-    
-	@objc func handleRegister() {
-        
-        //need to fix the load of the quote and the bio field.
-        var bio = ""
-        var quote = ""
-        
-		guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else { return }
-		Auth.auth().createUser(withEmail: email, password: password) { (user: User?, error) in
-			if error != nil {
-				print(error?.localizedDescription as Any)
-				return
-			}
-			
-			guard let uid = user?.uid else { return }
-			
-			//successfully authenticated user
-			let imageName = NSUUID().uuidString //created a uniqueID for the image
-			let storageRef = Storage.storage().reference().child("profile_images").child(imageName)  //sets up the reference to the storage bucket
-			if let uploadData = UIImagePNGRepresentation(self.profileImageView.image!) {  //turns the profile image loaded to a PNG data to upload.
-				storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
-					if error != nil {
-						print(error as Any)
-						return
-					}
-					if let profileImageURL = metadata?.downloadURL()?.absoluteString {
-                        self.registerUserIntoDatabaseWithUID(uid: uid, name: name, email: email, bio: bio, quote: quote, profileImageURL: profileImageURL)
-					}
-				})
-			}
-		}
-	}
-    
     //handles the toggle between login and register
     @objc func handleLoginRegisterChange() {
         let title = loginRegisterSegmentedControl.titleForSegment(at: loginRegisterSegmentedControl.selectedSegmentIndex)
@@ -83,6 +39,52 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
         passwordTextFieldHeightAnchor = passwordTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: loginRegisterSegmentedControl.selectedSegmentIndex == 0 ? 1/2 : 1/3)
         passwordTextFieldHeightAnchor?.isActive = true
     }
+    
+    func handleLogin() {
+        guard let email = emailTextField.text, let password = passwordTextField.text else { return }
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if error != nil {
+                print(error?.localizedDescription as Any)
+                return
+            }
+            //successfully logged in user
+            self.setCurrentUser()
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+	@objc func handleRegister() {
+        //need to fix the load of the quote and the bio field.
+        var bio = "TEST"
+        var quote = "TEST"
+        
+		guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else { return }
+		Auth.auth().createUser(withEmail: email, password: password) { (user: User?, error) in
+			if error != nil {
+				print(error?.localizedDescription as Any)
+				return
+			}
+			
+			guard let uid = user?.uid else { return }
+			//successfully authenticated user
+            self.setCurrentUser()
+            
+			let imageName = NSUUID().uuidString //created a uniqueID for the image
+			let storageRef = Storage.storage().reference().child("profile_images").child(imageName)  //sets up the reference to the storage bucket
+			if let uploadData = UIImagePNGRepresentation(self.profileImageView.image!) {  //turns the profile image loaded to a PNG data to upload.
+				storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+					if error != nil {
+						print(error as Any)
+						return
+					}
+					if let profileImageURL = metadata?.downloadURL()?.absoluteString {
+                        self.registerUserIntoDatabaseWithUID(uid: uid, name: name, email: email, bio: bio, quote: quote, profileImageURL: profileImageURL)
+					}
+				})
+			}
+		}
+	}
+    
     
     //MARK:-  FACEBOOK LOGON FUNCTIONS
     
@@ -106,6 +108,7 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
             //this means we had a problem logging in
             print("error logging in \(error)")
         }
+
         showEmailAddress()
 
     }
@@ -123,6 +126,7 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
                 return
             }
             //successfully logged in user
+            self.setCurrentUser()
             self.updateUserProfile()
             self.dismiss(animated: true, completion: nil)
             print("Successfully logged in with user", user as Any)
@@ -141,8 +145,8 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
     @objc func updateUserProfile() {
         
         //need to fix the load of the quote and the bio field.
-        var bio = ""
-        var quote = ""
+        var bio = "filler"
+        var quote = "FILLER"
         
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if user != nil {
@@ -152,27 +156,6 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
         }
     }
 	
-	
-    private func registerUserIntoDatabaseWithUID(uid: String, name: String, email: String, bio: String, quote: String, profileImageURL: String) {
-		
-		let db = Firestore.firestore()
-		let usersReference = db.collection("users")
-        let newProfile = Profile(email: email, name: name, quote: quote, bio: bio, timeStamp: Date(), profileImageURL: profileImageURL)
-
-		usersReference.document(uid).setData(newProfile.dictionary, completion: { (usererror) in
-			
-			if usererror != nil {
-				print("USER LOAD ERROR", usererror?.localizedDescription as Any)
-				return
-			}
-			//sucessfully added the user
-            print("We've loaded the user")
-			self.dismiss(animated: true, completion: nil)
-		})
-		
-	}
-	
-    
     //MARK:- Image Selection Functions
     
     @objc func handleSelectProfileImageView() {
@@ -202,6 +185,23 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         print("poop")
 		dismiss(animated: true, completion: nil)
+    }
+    
+    private func registerUserIntoDatabaseWithUID(uid: String, name: String, email: String, bio: String, quote: String, profileImageURL: String) {
+        
+        let usersReference = db.collection("users")
+        let newProfile = Profile(email: email, name: name, quote: quote, bio: bio, timeStamp: Date(), profileImageURL: profileImageURL)
+        
+        usersReference.document(uid).setData(newProfile.dictionary, completion: { (usererror) in
+            
+            if usererror != nil {
+                print("USER LOAD ERROR", usererror?.localizedDescription as Any)
+                return
+            }
+            //sucessfully added the user
+            self.dismiss(animated: true, completion: nil)
+        })
+        
     }
     
 }

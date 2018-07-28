@@ -14,12 +14,14 @@ class HomeViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+
 		view.backgroundColor = fitchGray
         
         checkIfUserIsLoggedIn()
+        setupNavbar()
 		setupViews()
 	}
+    
 	
 	lazy var viewProfilesButton: UIButton = {
 		let button = UIButton(type: .system)
@@ -28,7 +30,7 @@ class HomeViewController: UIViewController {
 		button.translatesAutoresizingMaskIntoConstraints = false
 		button.setTitleColor(UIColor.white, for: .normal)
 		button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-		button.addTarget(self, action: #selector(handleViewProfiles), for: .touchUpInside)
+		button.addTarget(self, action: #selector(handleViewTrainers), for: .touchUpInside)
 		return button
 	}()
     
@@ -39,7 +41,7 @@ class HomeViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        button.addTarget(self, action: #selector(handleViewProfiles), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleViewProfile), for: .touchUpInside)
         return button
     }()
     
@@ -57,11 +59,11 @@ class HomeViewController: UIViewController {
     lazy var socialButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = fitchBlue
-        button.setTitle("Social Feed", for: .normal)
+        button.setTitle("STRIPE", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        button.addTarget(self, action: #selector(handleViewProfiles), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleViewStripe), for: .touchUpInside)
         return button
     }()
 
@@ -76,6 +78,27 @@ class HomeViewController: UIViewController {
 		return button
 	}()
 	
+    private func setupNavbar() {
+        let titleImageView = UIImageView(image: #imageLiteral(resourceName: "headerlogo"))
+        //set the frame for the icon at the top of the nav bar
+        titleImageView.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        //force the image into the frame we made above
+        titleImageView.contentMode = .scaleAspectFit
+        
+        navigationItem.titleView = titleImageView
+        
+        //just removes the shadow line from under the nav bar and replaces it with a lighter line
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
+        let navBarSeperatorView = UIView()
+        navBarSeperatorView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
+        view.addSubview(navBarSeperatorView)
+        navBarSeperatorView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+    }
+    
 	//CONSTRAINTS
     
     func setupViews() {

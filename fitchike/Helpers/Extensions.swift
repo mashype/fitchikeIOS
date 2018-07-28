@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 let imageCache = NSCache<AnyObject, AnyObject>() //cache to hold all our downloaded images.
 
@@ -43,3 +44,46 @@ extension UIImageView {
 	}
 	
 }
+
+
+
+extension UIViewController {
+    
+    @objc func dismiss() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func handleCancel() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func handleLogout() {
+        do {
+            try Auth.auth().signOut()
+        } catch let logoutError {
+            print(logoutError)
+        }
+        
+        let loginController = LoginViewController()
+        present(loginController, animated: true, completion: nil)
+    }
+    
+    //updates the current user to stay current on the current logged in user as a Profile object.
+    func setCurrentUser() {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            print("no current user")
+            return
+        }
+        
+        let userRef = db.collection("users").document(uid)
+        userRef.getDocument { (document, error) in
+            if error != nil {
+                print(error as Any)
+            } else {
+                currentUser = Profile(dictionary: (document?.data())!)!
+            }
+        }
+    }
+    
+}
+
