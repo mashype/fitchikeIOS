@@ -57,6 +57,10 @@ extension UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @objc func handlePopToHome() {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
     @objc func handleLogout() {
         do {
             try Auth.auth().signOut()

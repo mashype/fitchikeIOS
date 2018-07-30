@@ -14,6 +14,7 @@ protocol DocumentSerializable  {
 }
 
 struct Profile {
+    var uid: String?
 	var email:String?
 	var name:String?
     var quote: String?
@@ -23,6 +24,7 @@ struct Profile {
 	
 	var dictionary:[String:Any] {
 		return [
+            "uid":uid as Any,
 			"email":email as Any,
 			"name":name as Any,
             "quote":quote as Any,
@@ -35,14 +37,15 @@ struct Profile {
 
 extension Profile : DocumentSerializable {
 	init?(dictionary: [String : Any]) {
-		guard let email = dictionary["email"] as? String,
+		guard let uid = dictionary["uid"] as? String,
+            let email = dictionary["email"] as? String,
 			let name = dictionary["name"] as? String,
             let quote = dictionary["quote"] as? String,
             let bio = dictionary["bio"] as? String,
 			let timeStamp = dictionary["timeStamp"] as? Date,
 			let profileImageURL = dictionary["profileImageURL"] as? String else {return nil}
 		
-        self.init(email: email, name: name, quote: quote, bio: bio, timeStamp: timeStamp, profileImageURL: profileImageURL)
+        self.init(uid: uid, email: email, name: name, quote: quote, bio: bio, timeStamp: timeStamp, profileImageURL: profileImageURL)
 	}
 }
 

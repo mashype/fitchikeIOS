@@ -12,6 +12,9 @@ import Firebase
 
 class BookingController: UIViewController {
     
+    //Stripe settings view controller
+    let settingsVC = SettingsViewController()
+    
     override func viewWillAppear(_ animated: Bool) {
         nameLabel.text = selectedProfile.email
     }
@@ -88,34 +91,41 @@ class BookingController: UIViewController {
         
     }
     
+//    @objc func confirmBooking() {
+//        print("trying to load")
+//
+//        guard let uid = Auth.auth().currentUser?.uid else { return }
+//
+//        let bookingRef = db.collection("bookings")
+//        let userRef = db.collection("users").document(uid).collection("bookings")
+//
+//        let newBooking = Booking(trainerID: selectedProfile.email, clientID: uid, bookingDate: Date(), timeStamp: Date())
+//
+//        //adds this new booking to the booking table
+//        bookingRef.addDocument(data: newBooking.dictionary) { (error) in
+//            if error != nil {
+//                print(error as Any)
+//                return
+//            } else {
+//                //once loaded, this section load to the user assocaited table.
+//                userRef.addDocument(data: newBooking.dictionary) { (error) in
+//                    if error != nil {
+//                        print(error as Any)
+//                        return
+//                    } else {
+//                        print("ALL LOADED")
+//                    }
+//                }
+//            }
+//        }
+//
+//    }
+    
     @objc func confirmBooking() {
-        print("trying to load")
-            
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        
-        let bookingRef = db.collection("bookings")
-        let userRef = db.collection("users").document(uid).collection("bookings")
-        
-        let newBooking = Booking(trainerID: selectedProfile.email, clientID: uid, bookingDate: Date(), timeStamp: Date())
-        
-        //adds this new booking to the booking table
-        bookingRef.addDocument(data: newBooking.dictionary) { (error) in
-            if error != nil {
-                print(error as Any)
-                return
-            } else {
-                //once loaded, this section load to the user assocaited table.
-                userRef.addDocument(data: newBooking.dictionary) { (error) in
-                    if error != nil {
-                        print(error as Any)
-                        return
-                    } else {
-                        print("ALL LOADED")
-                    }
-                }
-            }
-        }
-        
+        let product = selectedProfile
+        let price = 5000
+        let checkoutViewController = BookingCheckoutController(product: product.email!, price: price, settings: self.settingsVC.settings)
+        self.navigationController?.pushViewController(checkoutViewController, animated: true)
     }
     
 }

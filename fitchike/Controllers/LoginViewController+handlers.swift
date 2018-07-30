@@ -66,9 +66,7 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
 			}
 			
 			guard let uid = user?.uid else { return }
-			//successfully authenticated user
-            self.setCurrentUser()
-            
+
 			let imageName = NSUUID().uuidString //created a uniqueID for the image
 			let storageRef = Storage.storage().reference().child("profile_images").child(imageName)  //sets up the reference to the storage bucket
 			if let uploadData = UIImagePNGRepresentation(self.profileImageView.image!) {  //turns the profile image loaded to a PNG data to upload.
@@ -80,6 +78,7 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
 					if let profileImageURL = metadata?.downloadURL()?.absoluteString {
                         self.registerUserIntoDatabaseWithUID(uid: uid, name: name, email: email, bio: bio, quote: quote, profileImageURL: profileImageURL)
 					}
+                    
 				})
 			}
 		}
@@ -190,7 +189,8 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
     private func registerUserIntoDatabaseWithUID(uid: String, name: String, email: String, bio: String, quote: String, profileImageURL: String) {
         
         let usersReference = db.collection("users")
-        let newProfile = Profile(email: email, name: name, quote: quote, bio: bio, timeStamp: Date(), profileImageURL: profileImageURL)
+        
+        let newProfile = Profile(uid: uid, email: email, name: name, quote: quote, bio: bio, timeStamp: Date(), profileImageURL: profileImageURL)
         
         usersReference.document(uid).setData(newProfile.dictionary, completion: { (usererror) in
             
@@ -199,6 +199,8 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
                 return
             }
             //sucessfully added the user
+           
+            self.setCurrentUser()
             self.dismiss(animated: true, completion: nil)
         })
         

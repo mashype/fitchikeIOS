@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import Stripe
 
 class HomeViewController: UIViewController {
 	
@@ -52,7 +53,8 @@ class HomeViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        button.addTarget(self, action: #selector(handleTrainerDetailTest), for: .touchUpInside)
+        //button.addTarget(self, action: #selector(handleTrainerDetailTest), for: .touchUpInside)
+        button.addTarget(self, action: #selector(alamoTest), for: .touchUpInside)
         return button
     }()
     
@@ -66,11 +68,23 @@ class HomeViewController: UIViewController {
         button.addTarget(self, action: #selector(handleViewStripe), for: .touchUpInside)
         return button
     }()
+    
+    lazy var createAccountButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = fitchBlue
+        button.setTitle("Create STP Account", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.addTarget(self, action: #selector(createStripeCustomer), for: .touchUpInside)
+//        button.addTarget(self, action: #selector(handleViewStripe), for: .touchUpInside)
+        return button
+    }()
 
 	lazy var logoutButton: UIButton = {
 		let button = UIButton(type: .system)
 		button.backgroundColor = fitchRed
-		button.setTitle("Logout", for: .normal)
+		button.setTitle("Logoutt", for: .normal)
 		button.translatesAutoresizingMaskIntoConstraints = false
 		button.setTitleColor(UIColor.white, for: .normal)
 		button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
@@ -106,15 +120,18 @@ class HomeViewController: UIViewController {
         view.addSubview(myProfileButton)
         view.addSubview(workoutHistoryButton)
         view.addSubview(socialButton)
+        view.addSubview(createAccountButton)
         view.addSubview(logoutButton)
         
-        viewProfilesButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 100, leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 75)
+        viewProfilesButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 70, leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 75)
 
         myProfileButton.anchor(viewProfilesButton.bottomAnchor, left: viewProfilesButton.leftAnchor, bottom: nil, right: viewProfilesButton.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 75)
         
         workoutHistoryButton.anchor(myProfileButton.bottomAnchor, left: viewProfilesButton.leftAnchor, bottom: nil, right: viewProfilesButton.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 75)
         
         socialButton.anchor(workoutHistoryButton.bottomAnchor, left: viewProfilesButton.leftAnchor, bottom: nil, right: viewProfilesButton.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 75)
+        
+        createAccountButton.anchor(logoutButton.bottomAnchor, left: viewProfilesButton.leftAnchor, bottom: nil, right: viewProfilesButton.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 75)
         
         logoutButton.anchor(socialButton.bottomAnchor, left: viewProfilesButton.leftAnchor, bottom: nil, right: viewProfilesButton.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 75)
 

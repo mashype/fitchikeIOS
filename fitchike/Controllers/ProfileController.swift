@@ -13,16 +13,16 @@ import Firebase
 class ProfileController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
-        print("TEST, test", currentUser)
         //reset the titles with any updates to the currentUser
         setupTitles()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(handleCancel))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(handlePopToHome))
     }
     
+
     
     func setupTitles() {
         

@@ -22,6 +22,7 @@
 		59209420210BD5CC007D2114 /* PaymentContextFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59209418210BD5CB007D2114 /* PaymentContextFooterView.swift */; };
 		59209421210BD5CC007D2114 /* MyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59209419210BD5CC007D2114 /* MyAPIClient.swift */; };
 		59209422210BD5CC007D2114 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5920941A210BD5CC007D2114 /* CheckoutViewController.swift */; };
+		598ECB6C210E4E63006DD451 /* BookingCheckoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598ECB6B210E4E63006DD451 /* BookingCheckoutController.swift */; };
 		5991EB56200D1F40002D629A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5991EB55200D1F40002D629A /* Profile.swift */; };
 		5997361D200AC3C3007D0F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997361C200AC3C3007D0F50 /* AppDelegate.swift */; };
 		59973621200AC3C3007D0F50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59973620200AC3C3007D0F50 /* LoginViewController.swift */; };
@@ -58,6 +59,7 @@
 		59209418210BD5CB007D2114 /* PaymentContextFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentContextFooterView.swift; sourceTree = "<group>"; };
 		59209419210BD5CC007D2114 /* MyAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAPIClient.swift; sourceTree = "<group>"; };
 		5920941A210BD5CC007D2114 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		598ECB6B210E4E63006DD451 /* BookingCheckoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookingCheckoutController.swift; path = /Users/mashype/Dropbox/Dev/iOS/fitchike/fitchike/Controllers/BookingCheckoutController.swift; sourceTree = "<absolute>"; };
 		5991EB55200D1F40002D629A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		59973619200AC3C3007D0F50 /* fitchike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitchike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5997361C200AC3C3007D0F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				5920940E2108CB87007D2114 /* BookingController.swift */,
+				598ECB6B210E4E63006DD451 /* BookingCheckoutController.swift */,
 				591B77AA20FD5F57001B8116 /* CustomTabBarController.swift */,
 				59FA722B201785D8005985E7 /* HomeViewController.swift */,
 				591B77B820FD78D3001B8116 /* HomeViewController+handlers.swift */,
@@ -378,6 +381,7 @@
 				592094112108F702007D2114 /* TrainerDetailDatasourceController+handlers.swift in Sources */,
 				59B52849210060C0005AF8E0 /* TestCells.swift in Sources */,
 				5997361D200AC3C3007D0F50 /* AppDelegate.swift in Sources */,
+				598ECB6C210E4E63006DD451 /* BookingCheckoutController.swift in Sources */,
 				5920941F210BD5CC007D2114 /* CheckoutRowView.swift in Sources */,
 				59B5284D21013A6C005AF8E0 /* TrainerListCell.swift in Sources */,
 				5920940F2108CB87007D2114 /* BookingController.swift in Sources */,

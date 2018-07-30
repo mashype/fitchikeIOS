@@ -21,6 +21,24 @@ class MyAPIClient: NSObject, STPEphemeralKeyProvider {
             fatalError()
         }
     }
+    
+//    func createStripeCustomer(_ email: String, completion: @escaping STPErrorBlock) {
+//        let url = self.baseURL.appendingPathComponent("customers")
+//
+//        var params: [String:Any] = [
+//            "email": currentUser.email as Any
+//        ]
+//
+//        Alamofire.request(url, method: .post, parameters: params).validate(statusCode: 200..<300).responseString { (response) in
+//            switch response.result {
+//            case .success:
+//                completion(nil)
+//            case .failure(let error):
+//                completion(error)
+//            }
+//        }
+//    }
+    
 
     func completeCharge(_ result: STPPaymentResult,
                         amount: Int,
@@ -50,12 +68,16 @@ class MyAPIClient: NSObject, STPEphemeralKeyProvider {
                 }
         }
     }
+    
+    
+    
 
     func createCustomerKey(withAPIVersion apiVersion: String, completion: @escaping STPJSONResponseCompletionBlock) {
         let url = self.baseURL.appendingPathComponent("ephemeral_keys")
         Alamofire.request(url, method: .post, parameters: [
             "api_version": apiVersion,
             //this is what we post up to stripe/heroku and should be the variable from the real customerID
+
             "customer_id": "cus_DJIU8Qei8XtI6Y"
             ])
             .validate(statusCode: 200..<300)

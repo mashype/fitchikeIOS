@@ -17,8 +17,7 @@ let stripePublishableKey = "pk_test_vG3uKuRBa3SChlHNZBIXzGam"
 //let fitchLiveKey = "pk_live_WDMjrNPtgpUdnh25lVHw09iA"
 
 // heroku Node back end address
-let backendBaseURL: String? = "https://mysterious-wildwood-23810.herokuapp.com/"
-
+let backendBaseURL = "https://mysterious-wildwood-23810.herokuapp.com/"
 
 let fitchBlue = UIColor(r: 0, g: 113, b: 188)
 let fitchRed = UIColor(r: 193, g: 38, b: 44)

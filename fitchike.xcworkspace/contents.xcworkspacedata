@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/mashype/Dropbox/Dev/iOS/fitchike/fitchike/Controllers/BookingCheckoutController.swift">
+   </FileRef>
+   <FileRef
       location = "group:fitchike.xcodeproj">
    </FileRef>
    <Group
