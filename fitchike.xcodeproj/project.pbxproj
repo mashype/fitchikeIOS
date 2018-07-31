@@ -23,6 +23,7 @@
 		59209421210BD5CC007D2114 /* MyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59209419210BD5CC007D2114 /* MyAPIClient.swift */; };
 		59209422210BD5CC007D2114 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5920941A210BD5CC007D2114 /* CheckoutViewController.swift */; };
 		598ECB6C210E4E63006DD451 /* BookingCheckoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598ECB6B210E4E63006DD451 /* BookingCheckoutController.swift */; };
+		598ECB6E210FD719006DD451 /* StripeCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598ECB6D210FD719006DD451 /* StripeCustomer.swift */; };
 		5991EB56200D1F40002D629A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5991EB55200D1F40002D629A /* Profile.swift */; };
 		5997361D200AC3C3007D0F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997361C200AC3C3007D0F50 /* AppDelegate.swift */; };
 		59973621200AC3C3007D0F50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59973620200AC3C3007D0F50 /* LoginViewController.swift */; };
@@ -60,6 +61,7 @@
 		59209419210BD5CC007D2114 /* MyAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAPIClient.swift; sourceTree = "<group>"; };
 		5920941A210BD5CC007D2114 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		598ECB6B210E4E63006DD451 /* BookingCheckoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookingCheckoutController.swift; path = /Users/mashype/Dropbox/Dev/iOS/fitchike/fitchike/Controllers/BookingCheckoutController.swift; sourceTree = "<absolute>"; };
+		598ECB6D210FD719006DD451 /* StripeCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeCustomer.swift; sourceTree = "<group>"; };
 		5991EB55200D1F40002D629A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		59973619200AC3C3007D0F50 /* fitchike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitchike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5997361C200AC3C3007D0F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,8 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				591B77AE20FD6803001B8116 /* DatasourceFiles */,
-				5991EB55200D1F40002D629A /* Profile.swift */,
 				5920940C2108C6F7007D2114 /* Booking.swift */,
+				5991EB55200D1F40002D629A /* Profile.swift */,
+				598ECB6D210FD719006DD451 /* StripeCustomer.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				59FA722F2018176E005985E7 /* Extensions.swift in Sources */,
 				591B77AD20FD67FE001B8116 /* TrainerListDatasource.swift in Sources */,
 				5920940D2108C6F7007D2114 /* Booking.swift in Sources */,
+				598ECB6E210FD719006DD451 /* StripeCustomer.swift in Sources */,
 				59209422210BD5CC007D2114 /* CheckoutViewController.swift in Sources */,
 				59973621200AC3C3007D0F50 /* LoginViewController.swift in Sources */,
 				591B77B520FD6B4F001B8116 /* TrainerListDatasourceController.swift in Sources */,

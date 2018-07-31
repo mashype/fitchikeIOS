@@ -64,27 +64,45 @@ extension HomeViewController {
     }
     
     @objc func createStripeCustomer() {
-        
-        print("trying to create user")
-        guard let email = currentUser.email, let uid = currentUser.uid else { return }
-        let baseURL = URL(string: backendBaseURL)
-        let url = baseURL?.appendingPathComponent("customer")
-        
-        var params: [String:Any] = [
-            "description" : uid,
-            "email" : email
-        ]
-        
-        Alamofire.request(url!, method: .post, parameters: params)
-            .validate(statusCode: 200..<300)
-            .responseString { response in
-                print("Request :\(String(describing: response.request))")
-                print("Response :\(String(describing: response.response))")
-                print("Result :\(String(describing: response.result))")
-                print("Result :\(String(describing: response.data))")
-        }
-
-
+        print("trying to create Stripe Customer")
+//        var stripeCustomer = StripeCustomer()
+//        let usersReference = db.collection("users").document(currentUser.uid!)
+//        guard let email = currentUser.email, let uid = currentUser.uid else { return }
+//        let baseURL = URL(string: backendBaseURL)
+//        let url = baseURL?.appendingPathComponent("customer")
+//
+//        let params: [String:Any] = [
+//            "description" : uid,
+//            "email" : email
+//        ]
+//
+//        Alamofire.request(url!, method: .post, parameters: params).responseJSON { response in
+//
+//            print("Result: \(response.result)")
+//
+//            if let json = response.result.value {
+//
+//                do {
+//                    let decoder = JSONDecoder()
+//                    stripeCustomer = try decoder.decode(StripeCustomer.self, from: response.data!)
+//
+//                    usersReference.updateData([
+//                        "stripeID": stripeCustomer.id
+//                    ]) { err in
+//                        if let err = err {
+//                            print("Error updating document: \(err)")
+//                        } else {
+//                            print("Document successfully updated", stripeCustomer.id)
+//                        }
+//                    }
+//
+//                } catch let jsonErr {
+//                    print("ERROR", jsonErr)
+//                }
+//
+//                print("JSON: \(json)") // serialized json response
+//            }
+//        }
     }
     
 

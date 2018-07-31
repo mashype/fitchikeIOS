@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 import Firebase
+import Alamofire
 
 
 extension LoginViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate, FBSDKLoginButtonDelegate {
@@ -189,7 +190,6 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
     private func registerUserIntoDatabaseWithUID(uid: String, name: String, email: String, bio: String, quote: String, profileImageURL: String) {
         
         let usersReference = db.collection("users")
-        
         let newProfile = Profile(uid: uid, email: email, name: name, quote: quote, bio: bio, timeStamp: Date(), profileImageURL: profileImageURL)
         
         usersReference.document(uid).setData(newProfile.dictionary, completion: { (usererror) in
@@ -199,11 +199,51 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
                 return
             }
             //sucessfully added the user
-           
+            self.createStripeCustomer(uid: uid, email: email)
             self.setCurrentUser()
             self.dismiss(animated: true, completion: nil)
         })
         
     }
+    
+    
+    private func createStripeCustomer(uid: String, email: String) {
+        
+        var stripeCustomer = StripeCustomer()
+        let usersReference = db.collection("users").document(uid)
+        let baseURL = URL(string: backendBaseURL)
+        let url = baseURL?.appendingPathComponent("customer")
+        let params: [String:Any] = [
+            "description" : uid,
+            "email" : email
+        ]
+        
+        print("trying to create Stripe Customer")
+        Alamofire.request(url!, method: .post, parameters: params).responseJSON { response in
+            //print("Result: \(response.result)")
+            if let json = response.result.value {
+                do {
+                    let decoder = JSONDecoder()
+                    stripeCustomer = try decoder.decode(StripeCustomer.self, from: response.data!)
+                    usersReference.updateData([
+                        "stripeID": stripeCustomer.id as Any
+                    ]) { err in
+                        if let err = err {
+                            print("Error updating document: \(err)")
+                        } else {
+                            print("Document successfully updated", stripeCustomer.id as Any)
+                        }
+                    }
+                } catch let jsonErr {
+                    print("ERROR", jsonErr)
+                }
+                //once loaded to Firebase and Stripe we set the current user.
+                self.setCurrentUser()
+                print("JSON: \(json)") // serialized json response
+            }
+        }
+    }
+    
+    
     
 }
